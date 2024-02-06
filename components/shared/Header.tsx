@@ -1,7 +1,9 @@
-import { SignedOut } from "@clerk/nextjs"
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "../ui/button"
+import NavItems from "./NavItems"
+import MobileNav from "./MobileNav"
 
 const Header = () => {
   return (
@@ -12,7 +14,18 @@ const Header = () => {
                     
                 </Image>
             </Link>
+
+
+            <SignedIn>
+                <nav className="md:flex-between hidden w-full max-w-xs">
+                    <NavItems />
+                </nav>
+            </SignedIn>
                 <div className="flex justify-end gap-3 w-32">
+                    <SignedIn>
+                        <UserButton afterSignOutUrl="/"/>
+                        <MobileNav />
+                    </SignedIn>
                     <SignedOut>
                         <Button asChild className="rounded-full" size="lg">
                             <Link href="/signed-in">Login</Link>
