@@ -15,24 +15,24 @@ const Header = () => {
                 </Image>
             </Link>
 
-
             <SignedIn>
                 <nav className="md:flex-between hidden w-full max-w-xs">
                     <NavItems />
                 </nav>
             </SignedIn>
-                <div className="flex justify-end gap-3 w-32">
-                    <SignedIn>
-                        <UserButton afterSignOutUrl="/"/>
-                        <MobileNav />
-                    </SignedIn>
-                    <SignedOut>
-                        <Button asChild className="rounded-full" size="lg">
-                            <Link href="/signed-in">Login</Link>
 
-                        </Button>
-                    </SignedOut>
-                </div>
+            <div className="flex justify-end gap-3 w-32">
+                <SignedIn>
+                    <UserButton afterSignOutUrl="/"/>
+                    <MobileNav />
+                </SignedIn>
+                <SignedOut>
+                    <Button asChild className="rounded-full" size="lg">
+                        <Link href="/sign-in">Login</Link>
+                    </Button>
+                </SignedOut>
+            </div>
+
         </div>
     </header>
   )

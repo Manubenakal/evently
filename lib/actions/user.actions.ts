@@ -6,7 +6,7 @@ import { connectToDatabase } from '@/lib/database'
 import User from '@/lib/database/models/user.model'
 import Order from '@/lib/database/models/order.model'
 import Event from '@/lib/database/models/event.model'
-import { handleError } from '@/lib/utils'
+import { handleError } from '@/lib/utils' 
 
 import { CreateUserParams, UpdateUserParams } from '@/types'
 
@@ -17,7 +17,7 @@ export async function createUser(user: CreateUserParams) {
     const newUser = await User.create(user)
     return JSON.parse(JSON.stringify(newUser))
   } catch (error) {
-    handleError(error)
+    handleError(error) 
   }
 }
 

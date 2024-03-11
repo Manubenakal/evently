@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      <section className='bg-dotted-pattern md:py-10 bg-primary-50 py-5 bg-contain '>
+      <section className='bg-dotted-pattern md:py-10 bg-primary-50 py-5 bg-contain'>
         <div className='wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0'>
           <div className='flex flex-col justify-center gap-8'>
             <h1 className='h1-bold'>
@@ -25,7 +25,7 @@ export default function Home() {
             height={1000}
             alt='Hero'
             className='max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]'
-          ></Image>
+          />
         </div>
       </section>
       <section
@@ -36,7 +36,10 @@ export default function Home() {
           Trusted by <br />
           Thousands of events
         </h2>
-        <div className='flex flex-col md:flex-row w-full gap-5'>search cF</div>
+        <div className='flex flex-col md:flex-row w-full gap-5'>
+          Search
+          CategoryFilter  
+        </div>
       </section>
     </>
   );

@@ -19,7 +19,7 @@ const NavItems = () => {
             </li>
           )
         })}
-    </ul>
+    </ul> 
   );
 }
 
